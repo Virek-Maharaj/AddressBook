@@ -13,8 +13,17 @@ namespace AddressBookApi.Entities
 
         public string Surname { get; set; }
 
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
-        public string UpdatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
+
+        public string Address { get; set; }
+
+        public string Telephone { get; set; }
+
+        public string Cell { get; set; }
+
+        public string Email { get; set; }
+
     }
 }
