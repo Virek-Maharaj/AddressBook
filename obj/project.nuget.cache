@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "abiI+pkzUuzQ7jqfVonUidLm4WWwFkOhE3ntGyUNeyZuzyQo9yWRAj5zme1FJKraFm9DO+tz0ayWOyS/ihuhxw==",
+  "dgSpecHash": "vBhC+YkjKzFx5dzletFRCIcPW17PH1VJNJdrggbkhc29PMn1iylY57phP+os08nDSXkWf1hQ2e6KYEZc6T7Cyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\virek\\Documents\\addressBookAPI\\AddressBookApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\virek\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\virek\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.7\\microsoft.data.sqlite.core.5.0.7.nupkg.sha512",
@@ -34,6 +36,7 @@
     "C:\\Users\\virek\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\virek\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
     "C:\\Users\\virek\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
   ],

@@ -63,3 +63,5 @@ C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\linux-x
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

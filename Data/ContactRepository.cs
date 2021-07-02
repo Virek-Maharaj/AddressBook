@@ -52,5 +52,25 @@ namespace AddressBookApi.Data
         {
             return await _context.Contacts.SingleOrDefaultAsync(x => x.FirstName == firstName);
         }
+
+        public void Update(Contact contact)
+        {
+            _context.Entry(contact).State = EntityState.Modified;
+        }
+
+        public void Add(Contact contact)
+        {
+            _context.AddAsync(contact);
+        }
+
+        public async Task<bool> SaveAllAsync()
+        {
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+        public void DeleteContact(Contact contact)
+        {
+            _context.Entry(contact).State = EntityState.Deleted;
+        }
     }
 }

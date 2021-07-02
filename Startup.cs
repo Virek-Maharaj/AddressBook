@@ -1,4 +1,5 @@
 using AddressBookApi.Data;
+using AddressBookApi.Helpers;
 using AddressBookApi.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,6 +24,7 @@ namespace AddressBookApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddControllers();
             services.AddDbContext<AddressContext>(x => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
         }
