@@ -65,3 +65,9 @@ C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\win7-x6
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\angular.json
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\package-lock.json
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\package.json
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\tsconfig.app.json
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\tsconfig.json
+C:\Users\virek\Documents\addressBookAPI\bin\Debug\netcoreapp3.1\Client\tsconfig.spec.json

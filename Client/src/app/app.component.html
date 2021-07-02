@@ -1,0 +1,22 @@
+<mat-toolbar  color="primary" class="mat-elevation-z2" [style.z-index]="2">
+  <button mat-button (click)="sideNav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Address Book
+  <span [style.flex-grow]="1"></span>
+</mat-toolbar>
+<mat-sidenav-container [style.flex]="1">
+  <mat-sidenav  class="mat-elevation-z1"
+               [fixedTopGap]="56"  [style.width.px]="200">
+    <mat-nav-list>
+      <!-- <span>
+        <img src="assets/logo.png">
+      </span> -->
+      <app-link path="search"   (close)="sideNav.close()">Search</app-link>
+      <span [style.flex-grow]="1"></span>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
