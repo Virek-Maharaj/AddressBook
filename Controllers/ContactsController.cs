@@ -49,10 +49,10 @@ namespace AddressBookApi.Controllers
         {
             var user = await _contactRepository.GetContactByIdAsync(id);
 
-            Console.WriteLine(user);
-
             _mapper.Map(contactUpdateDTO, user);
 
+            user.FirstName = user.FirstName.ToLower();
+            user.Surname = user.Surname.ToLower();
             _contactRepository.Update(user);
 
             if (await _contactRepository.SaveAllAsync()) return NoContent();
@@ -83,8 +83,8 @@ namespace AddressBookApi.Controllers
 
             var newContact = new Contact
             {
-                FirstName = contact.FirstName,
-                Surname = contact.Surname,
+                FirstName = contact.FirstName.ToLower(),
+                Surname = contact.Surname.ToLower(),
                 BirthDate = contact.BirthDate,
                 UpdatedDate = contact.UpdatedDate,
                 Address = contact.Address,

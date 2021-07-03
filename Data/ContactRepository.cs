@@ -38,6 +38,11 @@ namespace AddressBookApi.Data
                 query = query.Where(f => f.Cell == contactParams.cell);
             }
 
+            query = contactParams.OrderBy switch
+            {
+                _ => query.OrderBy(u => u.FirstName)
+            };
+
 
 
             return await PagedList<Contact>.CreateAsync(query, contactParams.PageNumber, contactParams.PageSize);

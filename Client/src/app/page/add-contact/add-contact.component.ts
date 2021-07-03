@@ -101,6 +101,7 @@ export class AddContactComponent implements OnInit {
       next=>{
         this.log.info(next)
         this.snack.open('Updated Contact')
+        this.app.editPage = false;
         this.router.navigate(['address-book'])
       },
       err=>{

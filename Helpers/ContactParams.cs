@@ -23,5 +23,7 @@ namespace AddressBookApi.Helpers
         public string surname { get; set; }
 
         public string cell { get; set; }
+
+        public string OrderBy { get; set; } = "firstName";
     }
 }
