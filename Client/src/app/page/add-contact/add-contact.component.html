@@ -1,0 +1,82 @@
+<mat-toolbar *ngIf="!this.app.editPage" color="primary" class="mat-elevation-z2" [style.z-index]="2">
+    Add Contact
+    <span appStretch></span>
+</mat-toolbar>
+<mat-toolbar *ngIf="this.app.editPage" color="primary" class="mat-elevation-z2" [style.z-index]="2">
+    Update Contact
+    <span appStretch></span>
+</mat-toolbar>
+<mat-card>
+    <mat-card-content [formGroup]="form" (keydown.enter)="form.valid" appWrap wrapMargin="0">
+        <div>
+            <mat-form-field class="background" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input type="string" matInput formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="background" appearance="outline">
+                <mat-label>Surname</mat-label>
+                <input  type="string" matInput formControlName="surname" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <!-- <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Birth Date</mat-label>
+                <input type="string"  matInput formControlName="birthDate" autocomplete="off"  >
+            </mat-form-field>
+        </div> -->
+
+        <div>
+            <mat-form-field id=dates>
+              <input  matInput id="DatePicker"  formControlName="birthDate" (dateChange)="onDateChange($event)" 
+              [matDatepicker]="picker" placeholder="Birth Date" autocomplete="off">
+              <mat-datepicker-toggle matTooltip="The date that the file will be sent to BankServ" matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker ></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput formControlName="address" autocomplete="off"
+                cdkTextareaAutosize
+                cdkAutosizeMinRows="3"
+                cdkAutosizeMaxRows="5">    
+                </textarea>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Telephone</mat-label>
+                <input type="text" matInput formControlName="telephone"  autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="background" appearance="outline">
+                <mat-label>Cell</mat-label>
+                <input type="text" matInput formControlName="cell"  autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="background" appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input type="text" matInput formControlName="email"  autocomplete="off">
+            </mat-form-field>
+        </div>
+
+    </mat-card-content>
+    <div class="btn-group">
+      <button mat-raised-button (click)="onCancel()" color="primary">Cancel</button>
+      <button  mat-raised-button (click)="onAdd()"  *ngIf="!this.app.editPage" color="primary" [disabled]="form.invalid">Add</button>
+      <button  mat-raised-button (click)="onUpdate()" *ngIf="this.app.editPage" color="primary" [disabled]="form.invalid">Update</button>
+    </div>
+</mat-card>
+    
+
+  

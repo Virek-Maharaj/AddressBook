@@ -10,6 +10,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { LinkComponent } from './custom/link/link.component';
+import { GrowDirective } from './custom/grow.directive';
+import { AddContactComponent } from './page/add-contact/add-contact.component';
+import { DatePipe } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -24,10 +28,11 @@ import { LinkComponent } from './custom/link/link.component';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
 
   ],
-  providers: [],
+  exports:[],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

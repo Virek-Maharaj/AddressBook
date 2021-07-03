@@ -6,13 +6,14 @@
   <span [style.flex-grow]="1"></span>
 </mat-toolbar>
 <mat-sidenav-container [style.flex]="1">
-  <mat-sidenav  class="mat-elevation-z1"
-               [fixedTopGap]="56"  [style.width.px]="200">
+  <mat-sidenav  [mode]="handset ? 'over' : 'side'" class="mat-elevation-z1"
+  [fixedTopGap]="56" [fixedInViewport]="handset" [opened]="!handset" [style.width.px]="200">
     <mat-nav-list>
       <!-- <span>
         <img src="assets/logo.png">
       </span> -->
-      <app-link path="search"   (close)="sideNav.close()">Search</app-link>
+      <app-link path="address-book" (click)="searchContacts()"  (close)="sideNav.close()">Search Contact</app-link>
+      <!-- <app-link path="add-contact" (click)="addContacts()"  (close)="sideNav.close()">Add Contact</app-link> -->
       <span [style.flex-grow]="1"></span>
     </mat-nav-list>
   </mat-sidenav>

@@ -1,0 +1,16 @@
+.btn-group{
+    display:flex ;
+    justify-content: flex-end;
+}
+
+::ng-deep .mat-button,button{
+    margin-right: 5px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+#dates,#dates1{
+    padding-left: 5px;  
+}

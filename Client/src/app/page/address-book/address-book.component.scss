@@ -1,0 +1,32 @@
+#searchBtn{
+    width: 100px;
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.mat-card-subtitle{
+    font-weight: bold;
+    color: black;
+}
+  
+  .mat-cell{
+      width: 75px;
+      justify-content: center;
+      overflow: visible;
+  }
+
+  .mat-header-cell{
+      width: 75px;
+      justify-content: center;
+      overflow: visible;
+  }
+
+  .searchdiv{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example-margin {
+    margin: 0 10px;
+  }

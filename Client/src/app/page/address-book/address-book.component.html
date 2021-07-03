@@ -1,0 +1,90 @@
+<mat-toolbar color="primary" class="mat-elevation-z2" [style.z-index]="2">
+    Search Contacts
+    <span appStretch></span>
+  </mat-toolbar>
+  <mat-card>
+    <mat-card-content [formGroup]="form" (keydown.enter)="form.valid" (keydown.enter)="form.valid && onSearch()" appWrap
+      wrapMargin="0">
+      <div class="searchdiv">
+        <mat-form-field appearance="outline" appGrow>
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName"  autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline" appGrow>
+          <mat-label>Surname</mat-label>
+          <input matInput formControlName="surname"  autocomplete="off">
+          <!-- <mat-hint>e.g 27xxxxxxxxx</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline" appGrow>
+          <mat-label>Cellphone</mat-label>
+          <input matInput formControlName="cell"  autocomplete="off">
+        </mat-form-field>
+        <button id="searchBtn" mat-raised-button (click)="onSearch()" color="primary">
+          search
+        </button>
+        <button id="searchBtn" mat-raised-button (click)="onAdd()" color="accent">
+          add
+        </button>
+      </div>
+    </mat-card-content>
+  
+      <mat-expansion-panel [expanded]=true>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Party Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-table [dataSource]="$models | async">
+          <ng-container matColumnDef="firstName">
+            <mat-header-cell *matHeaderCellDef>Full Name</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.firstName}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="surname">
+            <mat-header-cell *matHeaderCellDef>Surname</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.surname}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="birthDate">
+            <mat-header-cell *matHeaderCellDef>Birth Date</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.birthDate.substring(0, row.birthDate.indexOf('T'))}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="cell">
+            <mat-header-cell *matHeaderCellDef>Cell</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.cell}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="address">
+            <mat-header-cell *matHeaderCellDef>address</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.address}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="telephone">
+            <mat-header-cell *matHeaderCellDef>Telephone</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.telephone}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef>email</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{row.email}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <button  mat-icon-button [matMenuTriggerFor]="partyMenu" matTooltip="more">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #partyMenu="matMenu">
+                    <button mat-menu-item (click)="onDelete(row)">Delete</button>
+                    <button mat-menu-item (click)="onEdit(row)">Edit</button>
+                  </mat-menu>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="[ 'firstName', 'surname','birthDate','telephone','email','address', 'cell','action']">
+          </mat-header-row>
+          <mat-row *matRowDef="let row; columns: [ 'firstName', 'surname','birthDate','telephone','email', 'address','cell','action']">
+          </mat-row>
+        </mat-table>
+      </mat-expansion-panel>
+      <!-- <mat-progress-spinner
+      class="example-margin"
+      [color]="color"
+      [mode]="mode"
+      [value]="value">
+  </mat-progress-spinner> -->
+  </mat-card>
