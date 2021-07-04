@@ -1,0 +1,3 @@
+Pagination Table for the FE since the API support it.
+Use the contact details api.
+Testing
